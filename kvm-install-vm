@@ -55,7 +55,7 @@ OPTIONS
     -l          Location of Images  (default: $HOME/virt/images)
     -m          Memory Size (MB)    (default: 1024)
     -M mac      Mac address         (default: auto-assigned)
-    -t          Linux Distribution  (default: centos7)
+    -t          Linux Distribution  (default: ubuntu1604)
     -T          Timezone            (default: US/Eastern)
 
 DISTRIBUTIONS
@@ -70,7 +70,7 @@ DISTRIBUTIONS
 
 EXAMPLES
     $prog create foo
-        Create VM with the default parameters: CentOS 7, 1 vCPU, 1GB RAM, 10GB
+        Create VM with the default parameters: ubuntu1604, 1 vCPU, 1GB RAM, 10GB
         disk capacity.
 
     $prog create -c 2 -m 2048 -d 20 foo
@@ -522,9 +522,9 @@ function set_defaults ()
     IMAGEDIR=${HOME}/virt/images    # Directory to store images
     BRIDGE=virbr0                   # Hypervisor bridge
     PUBKEY=${HOME}/.ssh/id_rsa.pub  # SSH public key
-    DISTRO=centos7                  # Distribution
+    DISTRO=ubuntu1604               # Distribution
     MACADDRESS=                     # MAC Address
-    TIMEZONE=US/Eastern             # Timezone
+    TIMEZONE=UTC                    # Timezone
 
     # Reset OPTIND
     OPTIND=1
